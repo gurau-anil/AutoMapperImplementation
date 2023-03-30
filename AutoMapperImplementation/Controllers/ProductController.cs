@@ -24,7 +24,7 @@ namespace AutoMapperImplementation.Controllers
         {
             var products = await _productservice.GetAll();
             var mappedProducts = _mapper.Map<IEnumerable<ProductDTO>>(products);
-            return Ok(products);
+            return Ok(mappedProducts);
         }
 
         [HttpGet]

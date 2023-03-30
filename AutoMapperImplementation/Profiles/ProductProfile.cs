@@ -8,7 +8,8 @@ namespace AutoMapperImplementation.Profiles
     {
         public ProductProfile()
         {
-            CreateMap<Product, ProductDTO>();
+            CreateMap<Product, ProductDTO>()
+                .ForMember(x => x.Colour, y => y.MapFrom(c => c.Color));
         }
     }
 }
