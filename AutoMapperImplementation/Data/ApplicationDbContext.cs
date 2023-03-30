@@ -10,6 +10,7 @@ namespace AutoMapperImplementation.Data
         {}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultSchema("SalesLT");
             modelBuilder.ApplyConfiguration(new ProductMap());
         }
         public DbSet<Product> Product { get; set; }
